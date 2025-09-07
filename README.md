@@ -7,13 +7,49 @@ The shell supports built-in commands, environment variables, file system operati
 - Input validation : Command is limited to 128-characters.
 - User interface : Interactive prompt ( $mysh )
 - Signal Handling
-- Error Management 
+- Error Management
+
+# Basic commands
+- echo [text] : Display text to stdout
+- exit : Terminate the shell
+
+# File System Commands
+- ls [path] [--rec] [--d depth] [--f substring] : List directory contents with options
+- cd [path] : Change directory (supports ., .., ..., ....)
+- cat [file] : Display file contents or read from stdin
+- wc [file] : Count words, characters, and lines
+
+# Process Management
+- ps : list processes launched by shell
+- kill [pid] [signal] : send signals to processes
+- Background processes (&)
+
+# Network Commands: Client-server chat system
+- start-server [port] : Start a chat server on specified port
+- close-server : Terminate the current server
+- start-client [port] [hostname] : Connect to a chat server
+- send [port] [hostname] [message] : Send message to server
+
+# Advanced Features
+- Pipes: Chain commands using "|" operator (Multiple pipes are supported)
+```bash
+cat file.txt | grep hello | wc
+```
+- Dynamic environment variables: Initialize variables with $var expansion
+- Memory Management: Dynamic allocation for variables and processes
 
 # Installation & Setup
 ```bash
-git clone https://github.com/junyalex/Linux-Shell.git # clone repository
-cd src # change directory to where it has a "Makefile".
-make # creates executable file.
-./mysh # runs the application. 
+ # clone repository
+git clone https://github.com/junyalex/Linux-Shell.git
+
+# Navigate to source directory
+cd src
+
+# Creates an executable file called "mysh".
+make
+
+# Run the shell
+./mysh
 ```
 
