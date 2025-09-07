@@ -9,7 +9,7 @@ The shell supports built-in commands, environment variables, file system operati
 - Signal Handling
 - Error Management
 
-# Basic commands
+# Basic Commands
 - echo [text] : Display text to stdout
 - exit : Terminate the shell
 
