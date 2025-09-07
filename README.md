@@ -47,6 +47,7 @@ mysh$ sort data.txt
 ```
 
 # Installation & Setup
+- Operating System : Linux
 ```bash
  # clone repository
 git clone https://github.com/junyalex/Linux-Shell.git
@@ -59,5 +60,10 @@ make
 
 # Run the shell
 ./mysh
+```
+# Compilation 
+The project uses the following compiler flags for robust debugging and memory safety. 
+```bash
+-g -Wall -Wextra -Werror -fsanitize=address,leak,object-size,bounds-strict,undefined -fsanitize-address-use-after-scope
 ```
 
