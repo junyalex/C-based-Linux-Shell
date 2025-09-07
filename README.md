@@ -33,10 +33,18 @@ The shell supports built-in commands, environment variables, file system operati
 # Advanced Features
 - Pipes: Chain commands using "|" operator (Multiple pipes are supported)
 ```bash
-cat file.txt | grep hello | wc
+mysh$ cat file.txt | grep hello | wc
 ```
 - Dynamic environment variables: Initialize variables with $var expansion
 - Memory Management: Dynamic allocation for variables and processes
+
+# External Commands 
+- Any command not implemented as built-in is executed using the underlying Linux system binaries (via exec).
+- For example, 
+```bash
+mysh$ grep keyword file.txt
+mysh$ sort data.txt
+```
 
 # Installation & Setup
 ```bash
